@@ -7,18 +7,20 @@
   <body>
     <header class="header">
       <nav class="navigation">
-        <div class="navigation-item">
-          <a class="navigation-item__logo" href="">
-            <img class="navigation-item__logo--image" src="#" alt="">
+        <div class="navigation__sitename">
+          <a class="navigation__sitename-link" href="">
+            <img class="navigation__logo" src="#" alt="">
           </a>
-          <div class="navigation-item__button">
-            <a class="navigation-item__button--burger" href="">Меню</a>
-            <a class="navigation-item__button--close" href="">Закрыть</a>
+          <div class="navigation__button">
+            <a class="navigation__button-menu" href="">Меню</a>
+            <a class="navigation__button-close" href="">Закрыть</a>
           </div>
         </div>
-        <a class="navigation-item" href="">Главная</a>
-        <a class="navigation-item" href="">Каталог продукции</a>
-        <a class="navigation-item" href="">Подбор программы</a>
+        <ul class="navigation__menu">
+          <li><a class="navigation__menu-link" href="">Главная</a></li>
+          <li><a class="navigation__menu-link" href="">Каталог продукции</a></li>
+          <li><a class="navigation__menu-link" href="">Подбор программы</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -27,7 +29,7 @@
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 500 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>500 г</span>
@@ -41,12 +43,12 @@
               <span>700 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 1000 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>1000 г</span>
@@ -60,12 +62,12 @@
               <span>1000 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 500 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>500 г</span>
@@ -79,12 +81,12 @@
               <span>700 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 1000 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>1000 г</span>
@@ -98,12 +100,12 @@
               <span>1000 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 500 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>500 г</span>
@@ -117,12 +119,12 @@
               <span>400 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 1000 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>1000 г</span>
@@ -136,12 +138,12 @@
               <span>700 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
         <div class="catalogue-item">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__name">Cat energy pro 500 г</p>
-          <ul class="catalogue-item__feature">
+          <ul class="catalogue-item__features">
             <li class="catalogue-item__feature-item">
               <span>Объем</span>
               <span>500 г</span>
@@ -155,22 +157,22 @@
               <span>500 Р.</span>
             </li>
           </ul>
-          <a class="catalogue-item__button button" href="">Заказать</a>
+          <a class="catalogue-item__button button button--green" href="">Заказать</a>
         </div>
-        <div class="catalogue-item item--more">
+        <div class="catalogue-item catalogue-item--more">
           <img class="catalogue-item__image" src="#" alt="">
           <p class="catalogue-item__text">Показать еще 100500 товаров</p>
           <p class="catalogue-item__desc">На самом деле вкусов гораздо больше!</p>
-          <a class="catalogue-item__button button--more" href="">Показать все</a>
+          <a class="catalogue-item__button button button--gray" href="">Показать все</a>
         </div>
       </section>
     </main>
     <footer class="footer">
       <img class="footer__sitename" src="#" alt="">
       <div class="footer__social">
-        <a class="footer__social--vk" href=""></a>
-        <a class="footer__social--inst" href=""></a>
-        <a class="footer__social--fb" href=""></a>
+        <a class="footer__link footer__link--vk" href=""></a>
+        <a class="footer__link footer__link--inst" href=""></a>
+        <a class="footer__link footer__link--fb" href=""></a>
       </div>
       <div class="footer__copyright">
         <a class="footer__copyright-link" href="">HTML Academy</a>
