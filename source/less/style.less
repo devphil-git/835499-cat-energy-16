@@ -1,0 +1,75 @@
+/* ИМПОРТ БЭМ БЛОКОВ */
+@import "navigation.less";
+@import "banner.less";
+@import "articles.less";
+@import "descriptions.less";
+@import "footer.less";
+@import "catalogue.less";
+
+/* ПЕРЕМЕННЫЕ */
+@text-color1: #ffffff;
+@text-color2: #111111;
+@text-color3: #444444;
+@bg-color1: #68b738;
+@bg-color2: #f2f2f2;
+
+
+/* ШРИФТЫ */
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/oswaldregular.woff2") format("woff2"), url("/fonts/oswaldregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/oswaldmedium.woff2") format("woff2"), url("/fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ОСНОВНЫЕ СТИЛИ */
+body {
+  max-width: 320px;
+  margin: 0 auto;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1;
+  outline: 1px solid #e7e7e7;                   //ВРЕМЕННО
+
+  h1, p {
+  margin: 0;
+  font-weight: normal;
+  }
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0 10px;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button--green {
+  color: @text-color1;
+  background-color: @bg-color1;
+}
+
+.button--gray {
+  color: @text-color3;
+  background-color: @bg-color2;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
