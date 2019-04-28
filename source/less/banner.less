@@ -1,11 +1,12 @@
 .banner {
   height: 440px;                                                                   //ВРЕМЕННО
-  background: url(/img/index-background-mobile@1x.jpg) 0 0 no-repeat;
+  background: url(../img/index-background-mobile@1x.jpg) 0 0 no-repeat;
   text-align: center;
-  color: @text-color1;
+  color: @text-color0;
 
   .banner__title {
     font-size: 36px;
+    font-weight: normal;
     padding-top: 30px;
     margin-bottom: 20px;
   }
@@ -18,6 +19,50 @@
 
   .banner__button {
     width: 280px;
-    margin-top: 200px;              //ВРЕМЕННО
+    margin-top: 200px;                    //ВРЕМЕННО
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .banner {
+    //outline: 1px solid gray;            //ВРЕМЕННО
+    height: 500px;                        //ВРЕМЕННО
+    background: none;
+    color: @text-color1;
+    margin-left: 120px;
+    text-align: left;
+
+    .banner__title {
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 1;
+      max-width: 420px;
+    }
+
+    .banner__description {
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .banner__button {
+      margin: 0;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .banner {
+    margin-left: 190px;
+
+    .banner__title {
+      margin-top: 110px;
+    }
+
+    .banner__description {}
+
+    .banner__button {}
   }
 }

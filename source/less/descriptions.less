@@ -1,21 +1,78 @@
 .descriptions {
-  height: 420px;              //ВРЕМЕННО
+  //height: 420px;                    //ВРЕМЕННО
+  margin-bottom: 100px;               //ВРЕМЕННО
 
   .descriptions__title {
     padding: 20px 20px 0;
     font-size: 36px;
     font-weight: normal;
-    color: @text-color2;
+    color: @text-color1;
   }
 
-  .descriptions__item {
-    font-family: "Arial", san-serif;
-    font-size: 14px;
-    line-height: 1.29;
-    margin-left: 100px;
-    margin-right: 25px;
-    color: @text-color3;
+  .descriptions__items {
+
+    .descriptions__item {
+      font-family: "Arial", san-serif;
+      font-size: 14px;
+      line-height: 1.29;
+      margin-left: 100px;
+      margin-right: 25px;
+      color: @text-color4;
+    }
   }
 }
 
+@media (min-width: @tablet-width) {
+  .descriptions {
+    margin-left: 30px;
 
+    .descriptions__title {
+      font-size: 60px;
+      font-weight: normal;
+      line-height: 1;
+      margin: 30px 0;
+      padding: 0;
+      flex-grow: 2;
+    }
+
+    .descriptions__items {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      .descriptions__item {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 230px;
+        margin-left: 0;
+
+        &:nth-child(odd) {
+          max-width: 205px;
+          margin-right: 180px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .descriptions {
+    margin-left: 110px;
+
+    .descriptions__title {}
+
+    .descriptions__items {
+
+      .descriptions__item {
+        max-width: 250px;
+        margin-right: 70px;
+
+        &:nth-child(odd) {
+          max-width: 250px;
+          margin-right: 70px;
+        }
+      }
+    }
+  }
+}

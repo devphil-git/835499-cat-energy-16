@@ -1,37 +1,91 @@
 .articles {
-  height: 550px;                //ВРЕМЕННО
+  //height: 550px;                //ВРЕМЕННО
+
+  .article {
+    height: 265px;                //ВРЕМЕННО
+    background-color: #f2f2f2;    //ВРЕМЕННО
+    margin: 0 20px 20px;
+
+    .article__title {
+      font-weight: normal;
+      line-height: 1.54;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 30px;
+      color: @text-color1;
+    }
+
+    .article__text {
+      font-family: "Arial", sans-serif;
+      font-size: 14px;
+      line-height: 1.29;
+      padding-left: 20px;
+      padding-right: 30px;
+      margin-bottom: 20px;
+      color: @text-color4;
+    }
+
+    .article__button {
+      padding-left: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: @text-color1;
+    }
+  }
 }
 
-.article {
-  height: 265px;                //ВРЕМЕННО
-  background-color: #f2f2f2;    //ВРЕМЕННО
-  margin: 0 20px 20px;
+@media (min-width: @tablet-width) {
+  .articles {
 
-  .article__title {
-    font-weight: normal;
-    line-height: 1.54;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 30px;
-    color: @text-color2;
+    .article {
+      height: 400px;                    //ВРЕМЕННО
+      margin: 0 30px;
+      padding-left: 55px;
+      margin-bottom: 30px;
+
+      .article__title {
+        font-size: 36px;
+        font-weight: normal;
+        line-height: 1;
+        text-align: left;
+        margin: 0;
+        padding-top: 80px;
+      }
+
+      .article__text {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-top: 25px;
+        margin-bottom: 60px;
+        padding: 0;
+        max-width: 370px;
+      }
+
+      .article__button {
+        font-size: 20px;
+        padding-left: 0;
+      }
+    }
   }
+}
 
-  .article__text {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 1.29;
-    padding-left: 20px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-    color: @text-color3;
+@media (min-width: @desktop-width) {
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 70px 100px;
+
+    .article {
+      width: 570px;
+      margin: 0 40px;
+
+      .article__title {}
+
+      .article__text {}
+
+      .article__button {}
+    }
   }
-
-  .article__button {
-    padding-left: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @text-color2;
-  }
-
-
 }
