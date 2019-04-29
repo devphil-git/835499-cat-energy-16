@@ -1,21 +1,54 @@
 .footer {
-  background-color: #f2f2f2;  //ВРЕМЕННО
-  height: 235px;               //ВРЕМЕННО
-
+  background-color: #f2f2f2;                //ВРЕМЕННО
+  //height: 235px;                          //ВРЕМЕННО
   text-align: center;
+
+  .footer__logo {
+    width: 128px;
+    margin-top: 40px;
+  }
 
   .footer__social {
     margin: 20px;
 
-    .footer__link{
+    .footer__link {
       margin: 10px;
       text-decoration: none;
-      color: #111111;
+      color: @text-color1;
     }
   }
 
   .footer__copyright-link {
     text-decoration: none;
-    color: #111111;
+    color: @text-color1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 30px;
+
+    .footer__logo {
+      margin-top: 0;
+    }
+
+    .footer__social {
+      margin: 60px auto;
+    }
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .footer{
+    padding: 0 110px;
+
+    .footer__logo {}
+
+    .footer__social {}
   }
 }
