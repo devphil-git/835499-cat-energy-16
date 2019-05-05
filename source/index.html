@@ -10,24 +10,24 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navigation">
+      <nav class="navigation navigation--nojs navigation--closed">
         <div class="navigation__logo">
           <a class="navigation__logo-link" href=""></a>
-          <div class="navigation__button">
-            <a class="navigation__button-menu" href="">
-              <img class="button-menu" src="img/icon-mobile-menu.svg" alt="">
+          <div class="navigation__buttons">
+            <button class="navigation__button-menu" type="button">
               <span class="visually-hidden">Меню</span>
-            </a>
-            <a class="navigation__button-close visually-hidden" href="">
-              <img class="button-close" src="img/icon-close.svg" alt="">
+              <img class="button-menu" src="img/icon-mobile-menu.svg" alt="">
+            </button>
+            <button class="navigation__button-close visually-hidden" type="button">
               <span class="visually-hidden">Закрыть</span>
-            </a>
+              <img class="button-close" src="img/icon-close.svg" alt="">
+            </button>
           </div>
         </div>
-        <ul class="navigation__menu visually-hidde">
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="">Главная</a></li>
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="catalog.html">Каталог продукции</a></li>
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="form.html">Подбор программы</a></li>
+        <ul class="navigation__menu">
+          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color menu-link--color-index" href="">Главная</a></li>
+          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color menu-link--color-index" href="catalog.html">Каталог продукции</a></li>
+          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color menu-link--color-index" href="form.html">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
@@ -35,41 +35,46 @@
       <article class="banner">
         <h1 class="banner__title">Функциональное питание для котов</h1>
         <p class="banner__description">Занялся собой? Займись котом!</p>
-        <img class="banner__image" src="#" alt="">
-        <img class="banner__background" src="#" alt="">
-        <a class="banner__button button button--green" href="">Подобрать программу</a>
+        <img class="banner__image-mobile" src="img/index-can-mobile@1x.png" alt="">
+        <img class="banner__image-tablet" src="img/index-can-tablet@1x.jpg" alt="">
+        <img class="banner__image-desktop" src="img/index-can-desktop@1x.png" alt="">
+        <a class="banner__button button button--green" href="form.html">Подобрать программу</a>
       </article>
       <section class="articles">
         <div class="article">
+          <div class="article__icon">
+            <img class=" article__icon-slim" src="img/icon-cat-slim.svg" alt="">
+          </div>
           <h2 class="article__title">Похудение</h2>
-          <img class="article__icon article__icon--slim" src="#" alt="">
-          <p class="article__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="article__button" href="">Каталог Slim</a>
+          <p class="article__text article__text--slim">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="article__button" href="catalog.html">Каталог Slim</a>
         </div>
         <div class="article">
+          <div class="article__icon">
+            <img class="article__icon-pro" src="img/icon-cat-pro.svg" alt="">
+          </div>
           <h2 class="article__title">Набор массы</h2>
-          <img class="article__icon article__icon--pro" src="#" alt="">
-          <p class="article__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="article__button" href="">Каталог Pro</a>
+          <p class="article__text article__text--pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="article__button" href="catalog.html">Каталог Pro</a>
         </div>
       </section>
       <section class="descriptions">
         <h2 class="descriptions__title">Как это работает</h2>
         <div class="descriptions__items">
-          <div class="descriptions__item">
-            <img class="descriptions__icon descriptions__icon--icon1" src="#" alt="">
+          <div class="descriptions__item descriptions__item--first">
+            <img class="descriptions__icon" src="img/advantage-leaf@1x.png" alt="">
             <p class="descriptions__text">Функциональное питание содержит только полезные питательные вещества.</p>
           </div>
-          <div class="descriptions__item">
-            <img class="descriptions__icon descriptions__icon--icon2" src="#" alt="">
+          <div class="descriptions__item descriptions__item--second">
+            <img class="descriptions__icon" src="img/advantage-powder@1x.png" alt="">
             <p class="descriptions__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </div>
-          <div class="descriptions__item">
-            <img class="descriptions__icon descriptions__icon--icon3" src="#" alt="">
+          <div class="descriptions__item descriptions__item--third">
+            <img class="descriptions__icon" src="img/advantage-dining@1x.png" alt="">
             <p class="descriptions__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </div>
-          <div class="descriptions__item">
-            <img class="descriptions__icon descriptions__icon--icon4" src="#" alt="">
+          <div class="descriptions__item descriptions__item--fourth">
+            <img class="descriptions__icon" src="img/advantage-clock@1x.png" alt="">
             <p class="descriptions__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </div>
         </div>
@@ -78,14 +83,46 @@
     <footer class="footer">
       <img class="footer__logo" src="img/logo-footer.svg" alt="">
       <div class="footer__social">
-        <a class="footer__link footer__link--vk" href="">ВКонтакте</a>
-        <a class="footer__link footer__link--inst" href="">Инстаграмм</a>
-        <a class="footer__link footer__link--fb" href="">Фейсбук</a>
+        <a class="social__link" href="">
+          <span class="social__name visually-hidden">ВКонтакте</span>
+          <img class="social__img social__img--vk-m" src="img/icon-vk-mobile.svg" alt="">
+        </a>
+        <a class="social__link" href="">
+          <span class="social__name visually-hidden">Инстаграмм</span>
+          <img class="social__img social__img--inst-m" src="img/icon-insta-mobile.svg" alt="">
+        </a>
+        <a class="social__link" href="">
+          <span class="social__name visually-hidden">Фейсбук</span>
+          <img class="social__img social__img--fb-m" src="img/icon-fb-mobile.svg" alt="">
+        </a>
       </div>
       <div class="footer__copyright">
         <a class="footer__copyright-link" href="">HTML Academy</a>
-        <img class="footer__copyright-logo" src="#" alt="">
+        <svg class="footer__copyright-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path  d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector(".navigation");
+      var navToggle = document.querySelector(".navigation__buttons");
+      var buttonMenu = document.querySelector(".navigation__button-menu");
+      var buttonClose = document.querySelector(".navigation__button-close");
+
+      navMain.classList.remove('navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('navigation--closed')) {
+          navMain.classList.remove('navigation--closed');
+          navMain.classList.add('navigation--opened');
+          buttonMenu.classList.add('visually-hidden');
+          buttonClose.classList.remove('visually-hidden');
+        }
+        else {
+          navMain.classList.add('navigation--closed');
+          navMain.classList.remove('navigation--opened');
+          buttonMenu.classList.remove('visually-hidden');
+          buttonClose.classList.add('visually-hidden');
+        }
+      });
+    </script>
   </body>
 </html>
