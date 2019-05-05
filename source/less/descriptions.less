@@ -1,23 +1,48 @@
+//MIXINS
+.background-numbers {
+  position: absolute;
+  z-index: 1;
+  top: -40px;
+  left: 110px;
+  display: block;
+  font-size: 280px;
+  color: @bg-color2;
+}
+
+
 .descriptions {
-  //height: 420px;                    //ВРЕМЕННО
   margin-bottom: 100px;               //ВРЕМЕННО
 
   .descriptions__title {
-    padding: 20px 20px 0;
+    margin: 0 0 40px 20px;
     font-size: 36px;
     font-weight: normal;
     color: @text-color1;
   }
 
   .descriptions__items {
+    margin: 20px;
 
     .descriptions__item {
-      font-family: "Arial", san-serif;
-      font-size: 14px;
-      line-height: 1.29;
-      margin-left: 100px;
-      margin-right: 25px;
-      color: @text-color4;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .descriptions__icon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        background-color: @bg-color1;
+      }
+
+      .descriptions__text {
+        margin-left: 20px;
+        font-family: "Arial", san-serif;
+        font-size: 14px;
+        line-height: 1.29;
+        color: @text-color4;
+      }
     }
   }
 }
@@ -30,9 +55,8 @@
       font-size: 60px;
       font-weight: normal;
       line-height: 1;
-      margin: 30px 0;
+      margin: 50px 0 70px;
       padding: 0;
-      flex-grow: 2;
     }
 
     .descriptions__items {
@@ -40,16 +64,59 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap;
+      margin: 0;
 
       .descriptions__item {
-        font-size: 16px;
-        line-height: 1.5;
-        max-width: 230px;
-        margin-left: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        max-width: 245px;
+        margin-bottom: 133px;
+        position: relative;
 
         &:nth-child(odd) {
-          max-width: 205px;
-          margin-right: 180px;
+          margin-right: 140px;
+        }
+
+        .descriptions__icon {
+          padding: 15px;
+          margin-bottom: 33px;
+        }
+
+        .descriptions__text {
+          position: relative;
+          z-index: 10;
+          margin-left: 0;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+
+      .descriptions__item--first {
+        &::after {
+          content: "1";
+          .background-numbers;
+          left: 120px;
+        }
+      }
+
+      .descriptions__item--second {
+        &::after {
+          content: "2";
+          .background-numbers;
+        }
+      }
+
+      .descriptions__item--third {
+        &::after {
+          content: "3";
+          .background-numbers;
+        }
+      }
+
+      .descriptions__item--fourth {
+        &::after {
+          content: "4";
+          .background-numbers;
         }
       }
     }
@@ -60,17 +127,19 @@
   .descriptions {
     margin-left: 110px;
 
-    .descriptions__title {}
+    .descriptions__title {
+      margin: 50px 0 70px;
+    }
 
     .descriptions__items {
 
       .descriptions__item {
         max-width: 250px;
-        margin-right: 70px;
+        margin-right: 75px;
 
         &:nth-child(odd) {
           max-width: 250px;
-          margin-right: 70px;
+          margin-right: 75px;
         }
       }
     }

@@ -1,39 +1,49 @@
 .banner {
-  height: 440px;                                                                   //ВРЕМЕННО
-  background: url(../img/index-background-mobile@1x.jpg) 0 0 no-repeat;
+  position: relative;
   text-align: center;
   color: @text-color0;
+  background: url(../img/index-background-mobile@1x.jpg) 0 0 no-repeat;
 
   .banner__title {
+    padding: 25px 0;
     font-size: 36px;
     font-weight: normal;
-    padding-top: 30px;
-    margin-bottom: 20px;
   }
 
   .banner__description {
     font-size: 14px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+  }
+
+  .banner__image-mobile {
+    margin: 30px 20px 0;
+  }
+
+  .banner__image-tablet {
+    display: none;
+  }
+
+  .banner__image-desktop {
+    display: none;
   }
 
   .banner__button {
     width: 280px;
-    margin-top: 200px;                    //ВРЕМЕННО
+    margin-top: 3px;
+    margin-bottom: 23px;
   }
 }
 
 
 @media (min-width: @tablet-width) {
   .banner {
-    //outline: 1px solid gray;            //ВРЕМЕННО
-    height: 500px;                        //ВРЕМЕННО
-    background: none;
-    color: @text-color1;
-    margin-left: 120px;
     text-align: left;
+    color: @text-color1;
+    background: none;
 
     .banner__title {
+      margin-top: 30px;
+      margin-left: 118px;
       font-size: 60px;
       font-weight: normal;
       line-height: 1;
@@ -41,13 +51,33 @@
     }
 
     .banner__description {
+      margin-top: 15px;
+      margin-left: 118px;
       font-size: 20px;
       font-weight: normal;
       line-height: 1;
     }
 
+    .banner__image-mobile {
+      display: none;
+    }
+
+    .banner__image-tablet {
+      display: block;
+      margin: 20px auto 0;
+    }
+
+    .banner__image-desktop {}
+
     .banner__button {
-      margin: 0;
+      position: absolute;
+      top: 250px;
+      margin-left: 118px;
+      width: 245px;
+      padding: 13px 0;
+      font-size: 20px;
+      line-height: 1.29;
+      z-index: 10;
     }
   }
 }
@@ -55,14 +85,46 @@
 
 @media (min-width: @desktop-width) {
   .banner {
-    margin-left: 190px;
+    margin-bottom: 375px;
 
-    .banner__title {
-      margin-top: 110px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -145px;
+      right: 0;
+      width: 720px;
+      height: 700px;
+      background: url(../img/index-background-desktop@1x.jpg) 100% 0 no-repeat;
+      z-index: 1;
     }
 
-    .banner__description {}
+    .banner__title {
+      margin-left: 190px;
+      padding-top: 75px;
+    }
 
-    .banner__button {}
+    .banner__description {
+      margin-top: 15px;
+      margin-left: 190px;
+    }
+
+    .banner__image-mobile {}
+
+    .banner__image-tablet {
+      display: none;
+    }
+
+    .banner__image-desktop {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 560px;
+      z-index: 10;
+    }
+
+    .banner__button {
+      margin-top: 60px;
+      margin-left: 190px;
+    }
   }
 }
