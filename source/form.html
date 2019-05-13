@@ -10,24 +10,36 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navigation navigation--nojs navigation--closed">
-        <div class="navigation__logo">
-          <a class="navigation__logo-link" href="index.html"></a>
-          <div class="navigation__buttons">
-            <button class="navigation__button-menu" type="button">
-              <span class="visually-hidden">Меню</span>
-              <img class="button-menu" src="img/icon-mobile-menu.svg" alt="">
-            </button>
-            <button class="navigation__button-close visually-hidden" type="button">
-              <span class="visually-hidden">Закрыть</span>
-              <img class="button-close" src="img/icon-close.svg" alt="">
-            </button>
-          </div>
+      <div class="header__logo">
+        <a class="header__logo-link" href="">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo-mobile.svg" alt="Cat Energy logo">
+          </picture>
+        </a>
+        <div class="header__buttons">
+          <button class="header__button button--menu" type="button">
+            <span class="header__button-name visually-hidden">Меню</span>
+            <img class="header__button-icon" src="img/icon-mobile-menu.svg" alt="">
+          </button>
+          <button class="header__button button--close visually-hidden" type="button">
+            <span class="header__button-name visually-hidden">Закрыть</span>
+            <img class="header__button-icon" src="img/icon-close.svg" alt="">
+          </button>
         </div>
-        <ul class="navigation__menu">
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="index.html">Главная</a></li>
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="catalog.html">Каталог продукции</a></li>
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="">Подбор программы</a></li>
+      </div>
+      <nav class="header__menu header__menu--nojs header__menu--closed">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--color" href="index.html">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--color" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--color" href="">Подбор программы</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -53,23 +65,23 @@
       </div>
     </footer>
     <script>
-      var navMain = document.querySelector(".navigation");
-      var navToggle = document.querySelector(".navigation__buttons");
-      var buttonMenu = document.querySelector(".navigation__button-menu");
-      var buttonClose = document.querySelector(".navigation__button-close");
+      var navMain = document.querySelector(".header__menu");
+      var navToggle = document.querySelector(".header__buttons");
+      var buttonMenu = document.querySelector(".button--menu");
+      var buttonClose = document.querySelector(".button--close");
 
-      navMain.classList.remove('navigation--nojs');
+      navMain.classList.remove('header__menu--nojs');
 
       navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('navigation--closed')) {
-          navMain.classList.remove('navigation--closed');
-          navMain.classList.add('navigation--opened');
+        if (navMain.classList.contains('header__menu--closed')) {
+          navMain.classList.remove('header__menu--closed');
+          navMain.classList.add('header__menu--opened');
           buttonMenu.classList.add('visually-hidden');
           buttonClose.classList.remove('visually-hidden');
         }
         else {
-          navMain.classList.add('navigation--closed');
-          navMain.classList.remove('navigation--opened');
+          navMain.classList.add('header__menu--closed');
+          navMain.classList.remove('header__menu--opened');
           buttonMenu.classList.remove('visually-hidden');
           buttonClose.classList.add('visually-hidden');
         }

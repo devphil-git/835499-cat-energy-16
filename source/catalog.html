@@ -10,24 +10,36 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navigation navigation--nojs navigation--closed">
-        <div class="navigation__logo">
-          <a class="navigation__logo-link" href="index.html"></a>
-          <div class="navigation__buttons">
-            <button class="navigation__button-menu" type="button">
-              <span class="visually-hidden">Меню</span>
-              <img class="button-menu" src="img/icon-mobile-menu.svg" alt="">
-            </button>
-            <button class="navigation__button-close visually-hidden" type="button">
-              <span class="visually-hidden">Закрыть</span>
-              <img class="button-close" src="img/icon-close.svg" alt="">
-            </button>
-          </div>
+      <div class="header__logo">
+        <a class="header__logo-link" href="">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo-mobile.svg" alt="Cat Energy logo">
+          </picture>
+        </a>
+        <div class="header__buttons">
+          <button class="header__button button--menu" type="button">
+            <span class="header__button-name visually-hidden">Меню</span>
+            <img class="header__button-icon" src="img/icon-mobile-menu.svg" alt="">
+          </button>
+          <button class="header__button button--close visually-hidden" type="button">
+            <span class="header__button-name visually-hidden">Закрыть</span>
+            <img class="header__button-icon" src="img/icon-close.svg" alt="">
+          </button>
         </div>
-        <ul class="navigation__menu visually-hidde">
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="index.html">Главная</a></li>
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="">Каталог продукции</a></li>
-          <li class="navigation__menu-item"><a class="navigation__menu-link menu-link--color" href="form.html">Подбор программы</a></li>
+      </div>
+      <nav class="header__menu header__menu--nojs header__menu--closed">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--color" href="index.html">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--color" href="">Каталог продукции</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--color" href="form.html">Подбор программы</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -36,9 +48,11 @@
         <h1 class="catalogue-title">Каталог продукции</h1>
         <div class="catalogue-items">
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/chicken-small-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/chicken-small-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/chicken-small-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/chicken-small-mobile@1x.jpg" alt="" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy pro 500 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -57,9 +71,11 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/chicken-big-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/chicken-big-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/chicken-big-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/chicken-big-mobile@1x.jpg" alt="" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy pro 1000 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -78,9 +94,11 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/fish-small-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/fish-small-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/fish-small-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/fish-small-mobile@1x.jpg" alt="" srcset="img/fish-small-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy pro 500 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -99,9 +117,11 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/fish-big-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/fish-big-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/fish-big-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/fish-big-mobile@1x.jpg" alt="" srcset="img/fish-big-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy pro 1000 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -120,9 +140,11 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/buckwheat-small-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/buckwheat-small-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/buckwheat-small-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/buckwheat-small-mobile@1x.jpg" alt="" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy slim 500 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -141,9 +163,11 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/buckwheat-big-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/buckwheat-big-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/buckwheat-big-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/buckwheat-big-mobile@1x.jpg" alt="" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy slim 1000 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -162,9 +186,11 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item">
-            <img class="catalogue-item__image catalogue-item__image--mobile" src="img/rice-small-mobile@1x.jpg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--tablet" src="img/rice-small-tablet@1x.png" alt="">
-            <img class="catalogue-item__image catalogue-item__image--desktop" src="img/rice-small-desktop@1x.png" alt="">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+              <img class="catalogue-item__image" src="img/rice-small-mobile@1x.jpg" alt="" srcset="img/rice-small-mobile@2x.jpg 2x" alt="">
+            </picture>
             <p class="catalogue-item__name">Cat energy slim 500 г</p>
             <ul class="catalogue-item__features">
               <li class="catalogue-item__feature-item">
@@ -183,8 +209,10 @@
             <a class="catalogue-item__button button button--green" href="">Заказать</a>
           </div>
           <div class="catalogue-item catalogue-item--more">
-            <img class="catalogue-item__image catalogue-item__image--more-mobile" src="img/icon-plus-mobile.svg" alt="">
-            <img class="catalogue-item__image catalogue-item__image--more" src="img/icon-plus.svg" alt="">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
+              <img class="catalogue-item__image catalogue-item__image--more" src="img/icon-plus-mobile.svg" alt="">
+            </picture>
             <p class="catalogue-item__name catalogue-item__name--more">Показать еще 100500 товаров</p>
             <p class="catalogue-item__desc catalogue-item__desc--more">На самом деле вкусов гораздо больше!</p>
             <a class="catalogue-item__button button button--gray" href="">Показать все</a>
@@ -214,23 +242,23 @@
       </div>
     </footer>
     <script>
-      var navMain = document.querySelector(".navigation");
-      var navToggle = document.querySelector(".navigation__buttons");
-      var buttonMenu = document.querySelector(".navigation__button-menu");
-      var buttonClose = document.querySelector(".navigation__button-close");
+      var navMain = document.querySelector(".header__menu");
+      var navToggle = document.querySelector(".header__buttons");
+      var buttonMenu = document.querySelector(".button--menu");
+      var buttonClose = document.querySelector(".button--close");
 
-      navMain.classList.remove('navigation--nojs');
+      navMain.classList.remove('header__menu--nojs');
 
       navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('navigation--closed')) {
-          navMain.classList.remove('navigation--closed');
-          navMain.classList.add('navigation--opened');
+        if (navMain.classList.contains('header__menu--closed')) {
+          navMain.classList.remove('header__menu--closed');
+          navMain.classList.add('header__menu--opened');
           buttonMenu.classList.add('visually-hidden');
           buttonClose.classList.remove('visually-hidden');
         }
         else {
-          navMain.classList.add('navigation--closed');
-          navMain.classList.remove('navigation--opened');
+          navMain.classList.add('header__menu--closed');
+          navMain.classList.remove('header__menu--opened');
           buttonMenu.classList.remove('visually-hidden');
           buttonClose.classList.add('visually-hidden');
         }
