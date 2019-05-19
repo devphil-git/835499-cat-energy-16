@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
       <div class="header__logo">
         <a class="header__logo-link" href="">
@@ -114,23 +117,23 @@
       <div class="footer__social">
         <a class="social__link" href="">
           <span class="social__name visually-hidden">ВКонтакте</span>
-          <svg class="social__img social__img--vk-m" width="22" height="12"><use xlink:href="img/sprite.svg#icon-vk-mobile"></use></svg>
-          <svg class="social__img social__img--vk" width="30" height="16"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+          <svg class="social__img social__img--vk-m" width="22" height="12"><use xlink:href="#icon-vk-mobile"></use></svg>
+          <svg class="social__img social__img--vk" width="30" height="16"><use xlink:href="#icon-vk"></use></svg>
         </a>
         <a class="social__link" href="">
           <span class="social__name visually-hidden">Инстаграмм</span>
-          <svg class="social__img social__img--inst-m" width="17" height="17"><use xlink:href="img/sprite.svg#icon-insta-mobile"></use></svg>
-          <svg class="social__img social__img--inst" width="23" height="23"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+          <svg class="social__img social__img--inst-m" width="17" height="17"><use xlink:href="#icon-insta-mobile"></use></svg>
+          <svg class="social__img social__img--inst" width="23" height="23"><use xlink:href="#icon-insta"></use></svg>
         </a>
         <a class="social__link" href="">
           <span class="social__name visually-hidden">Фейсбук</span>
-          <svg class="social__img social__img--fb-m" width="10" height="19"><use xlink:href="img/sprite.svg#icon-fb-mobile"></use></svg>
-          <svg class="social__img social__img--fb" width="14" height="28"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+          <svg class="social__img social__img--fb-m" width="10" height="19"><use xlink:href="#icon-fb-mobile"></use></svg>
+          <svg class="social__img social__img--fb" width="14" height="28"><use xlink:href="#icon-fb"></use></svg>
         </a>
       </div>
       <div class="footer__copyright">
         <a class="footer__copyright-link" href="">HTML Academy</a>
-        <svg class="footer__copyright-logo" width="41" height="66"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
+        <svg class="footer__copyright-logo" width="41" height="66"><use xlink:href="#htmlacademy"></use></svg>
       </div>
     </footer>
     <script>
