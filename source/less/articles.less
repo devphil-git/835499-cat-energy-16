@@ -47,7 +47,7 @@
       font-family: "Arial", sans-serif;
       font-size: 14px;
       line-height: 1.29;
-      padding: 20px 0 25px;
+      padding: 20px 0 22px;
       margin-bottom: 20px;
       color: @text-color4;
       border-bottom: 1px solid @line-color3;
@@ -69,37 +69,42 @@
         background: url(../img/icon-right-arrow-long.svg) 0 0 no-repeat;
       }
     }
+
+    .article__button:active {
+      opacity: 0.3;
+    }
   }
 }
 
 
 @media (min-width: @tablet-width) {
+
   .articles {
 
     .article {
       flex-direction: column;
       position: relative;
       margin: 0 30px 30px;
-      padding: 53px;
+      padding: 52px;
 
       .article__icon {
         position: absolute;
-        top: 90px;
+        top: 85px;
         right: 60px;
         width: 200px;
         height: 200px;
-        border-radius: 100px;
+        border-radius: 50%;
 
         .article__icon-slim {
-          top: -15px;
-          left: 25px;
+          top: -10px;
+          left: 28px;
           width: 141px;
           height: 194px;
         }
 
         .article__icon-pro {
           top: 40px;
-          left: -38px;
+          left: -35px;
           width: 268px;
           height: 119px;
         }
@@ -142,6 +147,7 @@
 }
 
 @media (min-width: @desktop-width) {
+
   .articles {
     display: flex;
     justify-content: space-between;

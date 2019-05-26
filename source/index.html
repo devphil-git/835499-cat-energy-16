@@ -7,6 +7,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div style="display:none">
@@ -24,24 +26,24 @@
         <div class="header__buttons">
           <button class="header__button button--menu" type="button">
             <span class="header__button-name visually-hidden">Меню</span>
-            <img class="header__button-icon" src="img/icon-mobile-menu.svg" alt="">
+            <svg class="header__button-icon"><use xlink:href="#icon-mobile-menu"></use></svg>
           </button>
           <button class="header__button button--close visually-hidden" type="button">
             <span class="header__button-name visually-hidden">Закрыть</span>
-            <img class="header__button-icon" src="img/icon-close.svg" alt="">
+            <svg class="header__button-icon"><use xlink:href="#icon-close"></use></svg>
           </button>
         </div>
       </div>
       <nav class="header__menu header__menu--nojs header__menu--closed">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--color header__menu-link--index" href="">Главная</a>
+            <a class="header__menu-link menu-link--index menu-link--active active-index" href="">Главная</a>
+          </li>
+          <li class="header__menu-item header__menu-item--index">
+            <a class="header__menu-link menu-link--index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--color header__menu-link--index" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--color header__menu-link--index" href="form.html">Подбор программы</a>
+            <a class="header__menu-link menu-link--index" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -84,36 +86,87 @@
           <div class="descriptions__item descriptions__item--first">
             <picture>
               <source type="image/webp" srcset="img/advantage-leaf@1x.webp 1x, img/advantage-leaf@2x.webp 2x">
-              <img class="descriptions__icon" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" alt="">
+              <img class="descriptions__icon" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" alt="Питательные вещества">
             </picture>
             <p class="descriptions__text">Функциональное питание содержит только полезные питательные вещества.</p>
           </div>
           <div class="descriptions__item descriptions__item--second">
             <picture>
               <source type="image/webp" srcset="img/advantage-powder@1x.webp 1x, img/advantage-powder@2x.webp 2x">
-              <img class="descriptions__icon" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" alt="">
+              <img class="descriptions__icon" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" alt="Растворимый порошок">
             </picture>
             <p class="descriptions__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </div>
           <div class="descriptions__item descriptions__item--third">
             <picture>
               <source type="image/webp" srcset="img/advantage-dining@1x.webp 1x, img/advantage-dining@2x.webp 2x">
-              <img class="descriptions__icon" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" alt="">
+              <img class="descriptions__icon" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" alt="Функциональное питание">
             </picture>
             <p class="descriptions__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </div>
           <div class="descriptions__item descriptions__item--fourth">
             <picture>
               <source type="image/webp" srcset="img/advantage-clock@1x.webp 1x, img/advantage-clock@2x.webp 2x">
-              <img class="descriptions__icon" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="">
+              <img class="descriptions__icon" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="Быстрые изменения">
             </picture>
             <p class="descriptions__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </div>
         </div>
       </section>
+      <section class="example">
+        <h2 class="example__title">Живой пример</h2>
+        <div class="example__container">
+          <div class="example__result">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__weight">5 кг</div>
+            <div class="example__time">60 дней</div>
+            <div class="example__cost">
+              <div class="example__cost-desc">Затраты на питание:</div>
+              <div class="example__cost-price">15 000 руб.</div>
+            </div>
+          </div>
+          <div class="example__visual">
+            <div class="example__images">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="example__image-first" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Жирный кот">
+              </picture>
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="example__image-second" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Худой кот">
+              </picture>
+            </div>
+            <div class="example__control">
+              <a class="example__value-start" href="">Было</a>
+              <div class="example__scale">
+                <div class="example__switch"></div>
+              </div>
+              <a class="example__value-end" href="">Стало</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+          <div class="contacts__address">
+            <div class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</div>
+            <div class="contacts__address-city">Санкт-Петербург</div>
+          </div>
+        </div>
+        <div class="contacts__map"></div>
+      </section>
     </main>
     <footer class="footer">
-      <img class="footer__logo" src="img/logo-footer.svg" alt="">
+      <img class="footer__logo" src="img/logo-footer.svg" alt="Cat Energy logo footer">
       <div class="footer__social">
         <a class="social__link" href="">
           <span class="social__name visually-hidden">ВКонтакте</span>
@@ -131,10 +184,10 @@
           <svg class="social__img social__img--fb" width="14" height="28"><use xlink:href="#icon-fb"></use></svg>
         </a>
       </div>
-      <div class="footer__copyright">
-        <a class="footer__copyright-link" href="">HTML Academy</a>
+      <a class="footer__copyright" href="">
+        <span class="footer__copyright-link">HTML Academy</span>
         <svg class="footer__copyright-logo" width="41" height="66"><use xlink:href="#htmlacademy"></use></svg>
-      </div>
+      </a>
     </footer>
     <script>
       var navMain = document.querySelector(".header__menu");
