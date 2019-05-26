@@ -3,8 +3,12 @@
 @import "banner.less";
 @import "articles.less";
 @import "descriptions.less";
+@import "example.less";
+@import "contacts.less";
 @import "footer.less";
 @import "catalogue.less";
+@import "extra.less";
+@import "program.less";
 @import "buttons.less";
 @import "fonts.less";
 
@@ -16,6 +20,8 @@
 @text-color4: #444444;
 @bg-color1: #68b738;
 @bg-color2: #f2f2f2;
+@bg-color3: #dcdcdc;
+@bg-color4: #eaeaea;
 @line-color1: #e6e6e6;
 @line-color2: #cdcdcd;
 @line-color3: #d9d9d9;
@@ -29,24 +35,16 @@
 
 
 /* ОСНОВНЫЕ СТИЛИ */
-html {                                          //ВРЕМЕННО
-  background-color: #e7e7e7;                    //ВРЕМЕННО
-}
-
 body {
   width: 320px;
-  //min-width: @mobile-width;
   margin: 0 auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 1;
-  outline: 1px solid #e7e7e7;                   //ВРЕМЕННО
-  background-color: white;                      //ВРЕМЕННО
 
   h1, p {
   margin: 0;
-  //font-weight: normal;
   }
 }
 
@@ -69,5 +67,3 @@ body {
     width: @desktop-width;
   }
 }
-
-

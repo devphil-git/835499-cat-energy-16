@@ -10,6 +10,14 @@
     .header__logo-link {
       margin-left: 20px;
 
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+
       .header__logo-img {
         width: 191px;
         height: 39px;
@@ -57,10 +65,15 @@
           font-weight: 500;
           text-decoration: none;
           text-transform: uppercase;
+          color: @text-color1;
         }
 
-        .header__menu-link--color {
-          color: @text-color1;
+        .header__menu-link:hover {
+          opacity: 0.6;
+        }
+
+        .header__menu-link:active {
+          opacity: 0.3;
         }
       }
     }
@@ -85,6 +98,7 @@
 
 
 @media (min-width: @tablet-width) {
+
   .header {
     display: flex;
     justify-content: flex-start;
@@ -121,6 +135,7 @@
         margin-right: 30px;
 
         .header__menu-item {
+          position: relative;
           margin-left: 35px;
           margin-top: 5px;
           border: none;
@@ -132,10 +147,17 @@
             margin: 0;
             text-decoration: none;
             text-transform: uppercase;
+            color: @text-color2;
           }
 
-          .header__menu-link--color {
-            color: @text-color2;
+          .menu-link--active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 2px;
+            background-color: @bg-color1;
           }
         }
       }
@@ -145,6 +167,7 @@
 
 
 @media (min-width: @desktop-width) {
+
  .header {
     padding-top: 55px;
     position: relative;
@@ -176,14 +199,21 @@
           .header__menu-link {
             font-size: 20px;
             line-height: 1.25;
-          }
-
-          .header__menu-link--color {
             color: @text-color1;
           }
 
-          .header__menu-link--index {
+          .menu-link--index {
             color: @text-color0;
+          }
+
+          .active-index::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 2px;
+            background-color:  @text-color0;
           }
         }
       }

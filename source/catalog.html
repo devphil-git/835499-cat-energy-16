@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div style="display:none">
@@ -24,29 +26,29 @@
         <div class="header__buttons">
           <button class="header__button button--menu" type="button">
             <span class="header__button-name visually-hidden">Меню</span>
-            <img class="header__button-icon" src="img/icon-mobile-menu.svg" alt="">
+            <svg class="header__button-icon"><use xlink:href="#icon-mobile-menu"></use></svg>
           </button>
           <button class="header__button button--close visually-hidden" type="button">
             <span class="header__button-name visually-hidden">Закрыть</span>
-            <img class="header__button-icon" src="img/icon-close.svg" alt="">
+            <svg class="header__button-icon"><use xlink:href="#icon-close"></use></svg>
           </button>
         </div>
       </div>
       <nav class="header__menu header__menu--nojs header__menu--closed">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--color" href="index.html">Главная</a>
+            <a class="header__menu-link" href="index.html">Главная</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--color" href="">Каталог продукции</a>
+            <a class="header__menu-link menu-link--active" href="">Каталог продукции</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link--color" href="form.html">Подбор программы</a>
+            <a class="header__menu-link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
+     <main>
       <section class="catalogue">
         <h1 class="catalogue-title">Каталог продукции</h1>
         <div class="catalogue-items">
@@ -57,7 +59,7 @@
               <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="Chicken small">
             </picture>
             <p class="catalogue-item__name">Cat energy pro 500 г</p>
             <ul class="catalogue-item__features">
@@ -83,7 +85,7 @@
               <source type="image/webp" srcset="img/chicken-big-mobile@1x.webp 1x, img/chicken-big-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Chicken big">
             </picture>
             <p class="catalogue-item__name">Cat energy pro 1000 г</p>
             <ul class="catalogue-item__features">
@@ -109,7 +111,7 @@
               <source type="image/webp" srcset="img/fish-small-mobile@1x.webp 1x, img/fish-small-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="Fish small">
             </picture>
             <p class="catalogue-item__name">Cat energy pro 500 г</p>
             <ul class="catalogue-item__features">
@@ -135,7 +137,7 @@
               <source type="image/webp" srcset="img/fish-big-mobile@1x.webp 1x, img/fish-big-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="Fish big">
             </picture>
             <p class="catalogue-item__name">Cat energy pro 1000 г</p>
             <ul class="catalogue-item__features">
@@ -161,7 +163,7 @@
               <source type="image/webp" srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="Buckwheat small">
             </picture>
             <p class="catalogue-item__name">Cat energy slim 500 г</p>
             <ul class="catalogue-item__features">
@@ -187,7 +189,7 @@
               <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="Buckwheat big">
             </picture>
             <p class="catalogue-item__name">Cat energy slim 1000 г</p>
             <ul class="catalogue-item__features">
@@ -213,7 +215,7 @@
               <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
-              <img class="catalogue-item__image" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="">
+              <img class="catalogue-item__image" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Rice small">
             </picture>
             <p class="catalogue-item__name">Cat energy slim 500 г</p>
             <ul class="catalogue-item__features">
@@ -235,7 +237,7 @@
           <div class="catalogue-item catalogue-item--more">
             <picture>
               <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
-              <img class="catalogue-item__image catalogue-item__image--more" src="img/icon-plus-mobile.svg" alt="">
+              <img class="catalogue-item__image catalogue-item__image--more" src="img/icon-plus-mobile.svg" alt="Больше">
             </picture>
             <p class="catalogue-item__name catalogue-item__name--more">Показать еще 100500 товаров</p>
             <p class="catalogue-item__desc catalogue-item__desc--more">На самом деле вкусов гораздо больше!</p>
@@ -243,9 +245,60 @@
           </div>
         </div>
       </section>
+      <section class="extra">
+        <h2 class="extra__title title--line">Дополнительные товары</h2>
+        <div class="extra__list">
+          <div class="extra__item">
+            <h3 class="extra__name">Сахарозаменитель</h3>
+            <div class="extra__description">
+              <span class="extra__element1">1 упаковка (100 г)</span>
+              <span class="extra__element2">200 р.</span>
+            </div>
+            <a class="extra__button button button--green" href="">Заказать</a>
+          </div>
+          <div class="extra__item">
+            <h3 class="extra__name">Питьевая вода</h3>
+            <div class="extra__description">
+              <span class="extra__element1">5 литров</span>
+              <span class="extra__element2">50 р.</span>
+            </div>
+            <a class="extra__button button button--green" href="">Заказать</a>
+          </div>
+          <div class="extra__item">
+            <h3 class="extra__name">Молоко</h3>
+            <div class="extra__description">
+              <span class="extra__element1">1 литр</span>
+              <span class="extra__element2">100 р.</span>
+            </div>
+            <a class="extra__button button button--green" href="">Заказать</a>
+          </div>
+          <div class="extra__item">
+            <h3 class="extra__name">Витамины</h3>
+            <div class="extra__description">
+              <span class="extra__element1">1 упаковка (30 г)</span>
+              <span class="extra__element2">300 р.</span>
+            </div>
+            <a class="extra__button button button--green" href="">Заказать</a>
+          </div>
+        </div>
+        <div class="extra__promo">
+          <svg class="extra__promo-logo" width="56" height="61"><use xlink:href="#icon-gift"></use></svg>
+          <p class="extra__promo-text">Закажите всё<br>и получите чехол для кота в подарок!</p>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+          <div class="contacts__address">
+            <div class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</div>
+            <div class="contacts__address-city">Санкт-Петербург</div>
+          </div>
+        </div>
+        <div class="contacts__map"></div>
+      </section>
     </main>
-    <footer class="footer">
-      <img class="footer__logo" src="img/logo-footer.svg" alt="">
+     <footer class="footer">
+      <img class="footer__logo" src="img/logo-footer.svg" alt="Cat Energy logo footer">
       <div class="footer__social">
         <a class="social__link" href="">
           <span class="social__name visually-hidden">ВКонтакте</span>
@@ -263,10 +316,10 @@
           <svg class="social__img social__img--fb" width="14" height="28"><use xlink:href="#icon-fb"></use></svg>
         </a>
       </div>
-      <div class="footer__copyright">
-        <a class="footer__copyright-link" href="">HTML Academy</a>
+      <a class="footer__copyright" href="">
+        <span class="footer__copyright-link">HTML Academy</span>
         <svg class="footer__copyright-logo" width="41" height="66"><use xlink:href="#htmlacademy"></use></svg>
-      </div>
+      </a>
     </footer>
     <script>
       var navMain = document.querySelector(".header__menu");

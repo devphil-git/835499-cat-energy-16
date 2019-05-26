@@ -1,6 +1,5 @@
 .footer {
-  background-color: #f2f2f2;                //ВРЕМЕННО
-  //height: 235px;                          //ВРЕМЕННО
+  background-color: @bg-color2;
   text-align: center;
 
   .footer__logo {
@@ -8,6 +7,14 @@
     margin: 0 20px;
     padding: 40px 76px 30px;
     border-bottom: 1px solid @line-color3;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .footer__social {
@@ -20,6 +27,15 @@
 
     .social__link {
       fill: @svg-color1;
+
+      &:hover {
+        fill: @bg-color1;
+      }
+
+      &:active {
+        fill: @bg-color1;
+        opacity: 0.3;
+      }
 
       .social__img {}
 
@@ -57,11 +73,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 12px 20px 20px;
+    padding: 5px 13px 5px 20px;
+    text-decoration: none;
 
     .footer__copyright-link {
       font-family: "Arial", sans-serif;
-      text-decoration: none;
       color: @text-color4;
     }
 
@@ -69,15 +85,28 @@
       width: 41px;
       fill: @svg-color1;
     }
+
+    &:hover .footer__copyright-link,
+    &:hover .footer__copyright-logo {
+      color: @bg-color1;
+      fill: @bg-color1;
+    }
+
+    &:active .footer__copyright-link,
+    &:active .footer__copyright-logo {
+      fill: @bg-color1;
+      opacity: 0.3;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
+
   .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 55px 25px;
+    padding: 40px 25px;
 
     .footer__logo {
       margin: 0;
@@ -141,8 +170,9 @@
 
 
 @media (min-width: @desktop-width) {
+
   .footer {
-    padding: 55px 105px;
+    padding: 40px 105px;
 
     .footer__logo {}
 
