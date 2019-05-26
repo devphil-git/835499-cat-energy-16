@@ -68,12 +68,13 @@
       .descriptions__item {
         align-items: flex-start;
         flex-direction: column;
-        max-width: 245px;
+        width: 245px;
         margin-bottom: 133px;
         position: relative;
 
         &:nth-child(odd) {
           margin-right: 140px;
+          width: 245px;
         }
 
         .descriptions__icon {
@@ -84,6 +85,7 @@
         .descriptions__text {
           position: relative;
           z-index: 10;
+          width: 245px;
           margin-left: 0;
           font-size: 16px;
           line-height: 1.5;
@@ -133,14 +135,18 @@
 
     .descriptions__items {
 
+      .descriptions__text {
+        width: 250px;
+      }
+
       .descriptions__item {
-        max-width: 250px;
-        margin-right: 75px;
+        width: 250px;
+        margin-right: 80px;
         margin-bottom: 123px;
 
         &:nth-child(odd) {
-          max-width: 250px;
-          margin-right: 75px;
+          width: 250px;
+          margin-right: 80px;
           margin-bottom: 123px;
         }
       }
