@@ -1,126 +1,141 @@
 .banner {
-  position: relative;
-  text-align: center;
-  color: @text-color0;
-  background: linear-gradient(to bottom, @bg-color1 60%, @text-color0 0);
-  background: url("../img/index-background-mobile@1x.jpg") 0 0 no-repeat;
+  width: @mobile-width;
+  margin: 0 auto;
 
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 100%;
-  }
+  .banner__container {
+    position: relative;
+    text-align: center;
+    color: @text-color0;
+    width: 100%;
+    background: linear-gradient(to bottom, @bg-color1 60%, @text-color0 0);
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
 
-  .banner__title {
-    padding: 27px 0;
-    font-size: 36px;
-    font-weight: normal;
-  }
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 100%;
+    }
 
-  .banner__description {
-    font-size: 14px;
-    text-transform: uppercase;
-  }
+    .banner__title {
+      padding: 27px 0;
+      font-size: 36px;
+      font-weight: normal;
+    }
 
-  .banner__image {
-    display: block;
-    margin: 28px 20px 0;
-    width: 280px;
-  }
+    .banner__description {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
 
-  .banner__button {
-    width: 280px;
-    margin-top: 3px;
-    margin-bottom: 20px;
+    .banner__image {
+      display: block;
+      margin: 28px 20px 0;
+      width: 280px;
+    }
+
+    .banner__button {
+      width: 280px;
+      margin-top: 3px;
+      margin-bottom: 20px;
+    }
   }
 }
 
 
 @media (min-width: @tablet-width) {
-
   .banner {
-    text-align: left;
-    color: @text-color1;
-    background: none;
+    width: @tablet-width;
 
-    .banner__title {
-      margin-top: 30px;
-      margin-left: 118px;
-      font-size: 60px;
-      font-weight: normal;
-      line-height: 1;
-      max-width: 420px;
-    }
+    .banner__container {
+      text-align: left;
+      color: @text-color1;
+      background: none;
 
-    .banner__description {
-      margin-top: 15px;
-      margin-left: 118px;
-      font-size: 20px;
-      font-weight: normal;
-      line-height: 1;
-    }
+      .banner__title {
+        margin-top: 30px;
+        margin-left: 118px;
+        font-size: 60px;
+        font-weight: normal;
+        line-height: 1;
+        max-width: 420px;
+      }
 
-    .banner__image {
-      margin: 20px auto 0;
-      width: 709px;
-    }
+      .banner__description {
+        margin-top: 15px;
+        margin-left: 118px;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 1;
+      }
 
-    .banner__button {
-      position: absolute;
-      top: 255px;
-      margin-left: 118px;
-      width: 245px;
-      padding: 13px 0;
-      font-size: 20px;
-      line-height: 1.29;
-      z-index: 10;
+      .banner__image {
+        margin: 20px auto 0;
+        width: 709px;
+      }
+
+      .banner__button {
+        position: absolute;
+        top: 255px;
+        margin-left: 118px;
+        width: 245px;
+        padding: 13px 0;
+        font-size: 20px;
+        line-height: 1.29;
+        z-index: 10;
+      }
     }
   }
 }
 
 
 @media (min-width: @desktop-width) {
-
   .banner {
-    margin-bottom: 375px;
+    width: @desktop-width;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: -145px;
-      right: 0;
-      width: 720px;
-      height: 700px;
-      background: url("../img/index-background-desktop@1x.jpg") 100% 0 no-repeat;
-      z-index: 1;
+    .banner__container {
+      margin-bottom: 375px;
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-        background-size: 100%;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -146px;
+        left: 50%;
+        width: 49.6vw;
+        height: 700px;
+        background: url("../img/index-background-desktop@1x.jpg") 100% 0 no-repeat;
+        background-size: cover;
+        z-index: 1;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-size: 100%;
+        }
       }
-    }
 
-    .banner__title {
-      margin-left: 190px;
-      padding-top: 75px;
-    }
+      .banner__title {
+        margin-left: 190px;
+        padding-top: 75px;
+      }
 
-    .banner__description {
-      margin-top: 15px;
-      margin-left: 190px;
-    }
+      .banner__description {
+        margin-top: 15px;
+        margin-left: 190px;
+      }
 
-    .banner__image {
-      position: absolute;
-      top: -5px;
-      left: 560px;
-      z-index: 10;
-      margin-top: 0;
-      width: 552px;
-    }
+      .banner__image {
+        position: absolute;
+        top: -5px;
+        left: 560px;
+        z-index: 10;
+        margin-top: 0;
+        width: 552px;
+      }
 
-    .banner__button {
-      margin-top: 55px;
-      margin-left: 190px;
+      .banner__button {
+        margin-top: 55px;
+        margin-left: 190px;
+      }
     }
   }
 }
